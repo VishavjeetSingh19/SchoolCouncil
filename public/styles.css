@@ -1,0 +1,142 @@
+body {
+    background-image: url("background-image.jpg");
+    background-size: cover;
+    background-color: #21398f;
+    background-position: center;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #2196f3;
+    text-align: center;
+  }
+  
+  .student {
+    background-color: #1d1a1a;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+    color: #ffffff;
+  }
+  
+  th {
+    background-color: #2196f3;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  form {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #2196f3;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button.edit-button {
+    background-color: #2196f3;
+  }
+  
+  button.delete-button {
+    background-color: #f44336;
+  }
+  
+  /* Responsive Styles */
+  
+  .actions {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .actions form {
+    margin-right: 10px;
+  }
+  
+  /* Adjustments for Mobile Devices */
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Adjustments for Mobile Devices */
+  @media (max-width: 768px) {
+    input[type="text"] {
+      width: calc(100% - 20px); /* Reduce the width of the text fields by 20 pixels on mobile */
+    }
+  }
+  
+  /* Adjustments for Desktop Devices */
+  @media (min-width: 769px) {
+    input[type="text"] {
+      width: calc(100% - 40px); /* Reduce the width of the text fields by 40 pixels on desktop */
+    }
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Adjustments for Mobile Devices */
+  @media (max-width: 768px) {
+    .container {
+      max-width: 90%; /* Adjust the width of the container to 90% on mobile */
+      padding: 10px; /* Adjust the padding of the container on mobile */
+    }
+  }
+  
+  /* Adjustments for Desktop Devices */
+  @media (min-width: 769px) {
+    .container {
+      max-width: 800px; /* Maintain the maximum width of the container on desktop */
+      padding: 20px; /* Maintain the padding of the container on desktop */
+    }
+  }
+  

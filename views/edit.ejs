@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Student</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Edit Student</h1>
+
+    <form action="/update-student/<%= student._id %>" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" autocomplete="off" name="name" value="<%= student.name %>" required>
+      
+      <label for="className">Class:</label>
+      <input type="text" id="className" autocomplete="off" name="className" value="<%= student.className %>" required>
+      
+      <label for="designation">Designation:</label>
+      <input type="text" id="designation" autocomplete="off" name="designation" value="<%= student.designation %>" required>
+      
+      <label for="house">House:</label>
+      <input type="text" id="house" autocomplete="off" name="house" value="<%= student.house %>" required>
+      
+      <label for="dutyTiming">Duty Timing:</label>
+      <input type="text" id="dutyTiming" autocomplete="off" name="dutyTiming" value="<%= student.dutyTiming %>" required>
+      
+      <label for="placeOfDuty">Place of Duty:</label>
+      <input type="text" id="placeOfDuty" autocomplete="off" name="placeOfDuty" value="<%= student.placeOfDuty %>" required>
+      
+      <button type="submit">Update</button>
+    </form>
+  </div>
+</body>
+</html>
