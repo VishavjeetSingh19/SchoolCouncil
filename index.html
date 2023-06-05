@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Council Members</title>
-  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <meta charset="UTF-8">
+  <title>Council Students</title>
+  <link rel="stylesheet" type="text/css" href="public/styles.css">
 </head>
 <body>
- <%= include('index') %>
+  <div class="container">
+    <h1>Ryan International School, Amritsar</h1>
+    <h2>Council Members 2023-24</h2>
+    <% students.forEach(function(student) { %>
+    <div class="student">
+      <p><strong>Name:</strong> <%= student.name %></p>
+      <p><strong>Class:</strong> <%= student.className %></p>
+      <p><strong>Designation:</strong> <%= student.designation %></p>
+      <p><strong>House:</strong> <%= student.house %></p>
+      <p><strong>Duty Timing:</strong> <%= student.dutyTiming %></p>
+      <p><strong>Place of Duty:</strong> <%= student.placeOfDuty %></p>
+      <div class="actions">
+        <form action="/edit-student/<%= student._id %>" method="GET" onsubmit="storeScrollPosition()">
+          <button type="submit" class="edit-button">Edit</button>
+        </form>
+        <form action="/delete-student/<%= student._id %>" method="POST" onsubmit="storeScrollPosition()">
+          <button type="submit" class="delete-button">Delete</button>
+        </form>
+      </div>
+    </div>
+    <% }); %>
+    <form action="/add-student" method="POST" onsubmit="storeScrollPosition()">
+      <label for="name">Name:</label>
+      <input type="text" name="name" autocomplete="off" required>
+      <label for="className">Class:</label>
+      <input type="text" name="className" autocomplete="off" required>
+      <label for="designation">Designation:</label>
+      <input type="text" name="designation" autocomplete="off" required>
+      <label for="house">House:</label>
+      <input type="text" name="house" autocomplete="off" required>
+      <label for="dutyTiming">Duty Timing:</label>
+      <input type="text" name="dutyTiming" autocomplete="off" required>
+      <label for="placeOfDuty">Place of Duty:</label>
+      <input type="text" name="placeOfDuty" autocomplete="off" required>
+      <button type="submit">Add Student</button>
+    </form>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
